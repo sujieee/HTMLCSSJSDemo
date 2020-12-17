@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接</title>
+</head>
+<body>
+    <!-- 
+        超链接可以让我们可以从一个页面跳转到其他页面，
+            或者是当前页面的其他位置
+        使用a标签来定义超链接
+            属性
+                href 指定跳转的路径
+                    值可以是一个外部网站的地址
+                    也可以写一个内部页面的地址
+                target 指定超链接打开的位置
+                    可选值
+                        _self 默认值 在当前页面打开超链接
+                        _blank 在一个新的页面中打开超链接
+        a是一个行内元素，在a标签中可以嵌套除它自身外的任何元素
+     -->
+    <a href="https://www.baidu.com">超链接</a>
+    <br>
+    <a href="12.列表.html" target="_self">超链接2</a>
+    <br>
+    <a href="outer/target2.html" target="_blank">超链接3</a>
+    <br>
+    <a href="#bottom">去底部</a>
+    <br>
+    <a href="#p3">去第三个p</a>
+    <br>
+    <!-- 可以使用javascript:;来作为href的属性值，此时点这个超链接什么都不会发生 -->
+    <a href="javascript:;">这是一个新的超链接</a>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Incidunt, impedit veritatis corrupti dolorem alias magni fuga non ad laborum minus voluptas iusto amet earum, saepe minima nam adipisci quae culpa.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam nisi in ab exercitationem id repellendus doloribus autem qui eius molestias! Rerum deleniti, consequuntur incidunt cumque architecto quia libero ullam id?</p>
+    <p id="p3">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure, delectus dicta illum ab in fugiat vero adipisci placeat aliquid deserunt similique at, accusantium reprehenderit voluptatem quam repudiandae itaque natus tenetur.</p>
+    <!-- 
+        可以直接将超链接的href属性设置为#，这样点击超链接以后页面不会发生跳转，而是转到当前页面的顶部位置
+        可以跳转到页面的指定位置，只要将href属性设置为 #目标元素的id属性值
+        id属性（唯一不重复的）
+            每一个标签都可以添加一个id属性
+            id属性就是元素的唯一标识，同一个页面不能出现重复的id属性
+     -->
+    <a id="bottom" href="#">回到顶部</a>
+</body>
+</html>
