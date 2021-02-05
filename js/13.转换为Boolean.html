@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>转换为Boolean</title>
+    <script>
+        /**
+         *  将其它数据类型转换为Boolean
+         * 方式一：
+         *  使用Boolean()函数
+         *      数字->布尔
+         *          除了0和NaN，其余的都是true
+         *      字符串->布尔
+         *          除了空串（无空格），其余的都是true
+         *      null->布尔
+         *          false
+         *      undefined->布尔
+         *          false
+         *      对象也会转换为true
+         * 方式二：
+         *  为任意的数据类型做两次非运算，即可将其转换为布尔值
+         *  例子：var a = "hello";
+         *       a = !!a;
+         */
+        var a = 123;
+        console.log("a的类型："+typeof a);
+        console.log("a的值："+a);
+        var b = Boolean(a);
+        console.log("b的类型："+typeof b);
+        console.log("b的值："+b);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

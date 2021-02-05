@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>一元运算符</title>
+    <script>
+      /* 
+        一元运算符
+            只需要一个操作数
+            + 正号
+            - 负号
+            对于非Number类型的值，它会将其先转换为Number类型，然后再运算
+            可以对一个其它的数据类型使用+，来将其转换为Number类型，原理和Number()一样
+         */
+      var a = 1;
+      a = +a;
+      a = true;
+      a = +a;
+      console.log("a = " + a);
+      console.log("a的类型：" + typeof a);
+      var result = 1 + + "2" + 3;
+      console.log("result = " + result); 
+    </script>
+  </head>
+  <body></body>
+</html>

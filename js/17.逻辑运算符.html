@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>逻辑运算符</title>
+    <script>
+      /* 
+        逻辑运算符
+        JS中提供了三种逻辑运算符
+        ! 非 可以用来对一个值进行非运算
+            所谓非运算，就是对一个布尔值进行取反操作
+                true变false，false变true
+            如果对一个值进行两次取反，它不会变化
+            如果是对非布尔值进行非运算，则会先将其转换为布尔值，然后再进行取反操作
+                可以利用该特点，将一个其它的数据类型转换为布尔值
+                可以为任意一个数据类型取两次反，即隐式来将其转换为布尔值，原理和Boolean()函数一样
+        && 与 可以对符号两侧的值进行与运算并返回结果
+            运算规则：两个值中只要有一个值为false，就返回false，只有两个值都会true时，才会返回true
+            是短路的，如果第一个值为false，则不会看第二个值
+        || 或 可以对符号两侧的值进行与运算并返回结果
+            运算规则：两个值中只要有一个值为true，就返回true，只有两个值都会false时，才会返回false
+            是短路的，如果第一个值为true，则不会看第二个值
+        && || 对非布尔值的情况
+            对于非布尔值进行与或运算时，会先将其转换为布尔值，然后再运算，并且返回原值
+            与运算：如果第一个值为true，则必然返回第二个值；如果第一个值为false，则直接返回第一个值
+            或运算：如果第一个值为true，则直接返回第一个值；如果第一个值为false，则必然返回第二个值
+         */
+      var a = "hello";
+      var b = !!a;
+      console.log("a = " + a);
+      console.log("b = " + b);
+      console.log("b的类型：" + typeof b);
+      var c = false && true;
+      console.log("c = " + c);
+      console.log("c的类型：" + c);
+      console.log("------------------------------");
+      // true&&true
+      // 如果两个都为true，则返回后面的原值
+      var result = 1 && 2; // 2
+      // false&&true
+      // 如果有false，则返回false的那个原值
+      result = 0 && 2; //0
+      // false&&false
+      // 如果两个都为false，则返回前面的原值
+      result = null && 0; //null
+      result = 1 || 0; //1
+      result = "" || "hello"; //"hello"
+      result = -1 || 0; //-1
+      console.log("result = " + result);
+      console.log("result的类型：" + result);
+    </script>
+  </head>
+  <body></body>
+</html>

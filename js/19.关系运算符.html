@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>关系运算符</title>
+    <script>
+      /* 
+        通过关系运算符可以比较两个值之间的大小关系
+            如果关系成立会返回true，如果关系不成立返回false
+        > 大于号
+          判断左侧的值是否大于右侧的值，如果关系成立返回true，不成立则返回false
+        >= 大于等于
+          判断左侧的值是否大于或等于右侧的值，如果关系成立返回true，不成立则返回false
+        < 小于号
+          判断左侧的值是否小于右侧的值，如果关系成立返回true，不成立则返回false
+        <=
+          判断左侧的值是否小于或等于右侧的值，如果关系成立返回true，不成立则返回false
+        非数值的情况
+          对于非数值进行比较时，会将其转换为数值然后进行比较
+          任何值和NaN做任何比较都会返回false
+          特殊情况：如果符号两侧的值都是字符串，不会将其转换为数值进行比较，而会分别比较字符串中字符的Unicode编码
+         */
+      var result = 5 > 10;
+      result = 1 > "0";
+      result = 10 > null;
+      result = "a" > "b";
+      result = "hello" > "helloo";
+      result = 10 < null;
+      result = 0 <= null;
+      result = "hello" > NaN;
+      result = "10" < "5";
+      //比较字符编码是一位一位进行比较
+      //如下就是先拿a和b比较，结果a<b，所以直接返回true了
+      result = "abc" < "b";
+      //如下就是先拿b与b比较，b=b,然后b=b，然后c>b，所以返回false。也就是如果比较出来相等就会进行下一位的比较，直到比较出来不相等就直接返回。可以用此特点对英文进行排序。
+      result = "bbc" < "b";
+      //此处因为两侧都是字符串，所以会分别比较Unicode码，先拿1和5的Unicode编码比较，1<5，所以直接返回true
+      //所以比较两个字符串型的数字，可能会得到不可预期的结果
+      result = "11" < "5";
+      //比较中文没有意义
+      //result="你"<"我";
+      //注意：在比较两个字符型数字，一定要将其转为数值型才能正确得到预期结果
+      result = +"9" > "5";
+      console.log("result = " + result);
+    </script>
+  </head>
+  <body></body>
+</html>

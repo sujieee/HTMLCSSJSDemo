@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>属性选择器</title>
+    <style>
+        /* 
+        [属性名] 选择指定属性的元素
+        [属性名=属性值] 选择指定属性和指定值的元素
+        [属性值^=属性值] 选择属性值以指定值开头的元素
+        [属性值$=属性值] 选择属性值以指定值结尾的元素
+        [属性值*=属性值] 选择属性值含有指定值的元素
+         */
+        p[title*=abc] {
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <p title="abc">少小离家老大回</p>
+    <p title="abcdef">乡音未改鬓毛衰</p>
+    <p title="hello">笑问客从何处来</p>
+    <p title="ddabc">落霞与孤鹜齐飞</p>
+    <p>秋水共长天一色</p>
+</body>
+</html>

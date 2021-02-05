@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>编码</title>
+    <script>
+        //在js里使用Unicode编码，字符串中使用转义字符输出Unicode编码（规范里这些编码对应的值，比如0030对应的在Unicode编码规范里对应的就是0这个值）
+        // \u四位编码
+        //这里四位编码是十六进制的
+        console.log("\u2620");
+    </script>
+</head>
+<body>
+    <!-- 
+        在html里使用Unicode编码
+        格式：&#编码;
+        注意：这里的编码需要的是十进制（要将16进制的编码转换过来，比如2620->9760）的
+     -->
+    <h1 style="font-size: 200px;">&#9760;</h1>
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>自增和自减</title>
+    <script>
+      /* 
+        自增和自减都会使原变量改变
+        自增 ++
+            通过自增可以使变量在自身的基础上增1
+            自增分成两种：后++（a++）和前++（++a），无论是哪一种都会立即使原变量的值增1
+        自减 --
+            通过自减可以使变量在自身的基础上减1
+            自减分成两种：后--（a--）和前--（--a），无论是哪一种都会立即使原变量的值减1
+         */
+      var a = 1;
+      var b = ++a;
+      var b = a++;
+      console.log("b = " + b);
+      console.log("a = " + a);
+      var c = 10;
+      //c++ 原值 ++c 新值
+      //10 + 12 + 12 = 34
+      var d = c++ + ++c + c;
+      console.log("c = " + c);
+      console.log("d = " + d);
+
+      var e = 20;
+      e = e++;
+      //等价于
+      var h = 20;
+      var i = h++;
+      console.log("e = " + e);
+      console.log("i = " + i);
+      console.log("h = " + h);
+      var n = 10;
+      var m = n--;
+      console.log("m = " + m);
+      console.log("n = " + n);
+
+      console.log("----------------------");
+
+      var n1 = 10;
+      var n2 = 20;
+      // n1为11 n1++为10
+      var k = n1++;
+      console.log("k = " + k); //10
+      console.log("n1 = " + n1); //11
+      k = ++n1;
+      console.log("k = " + k); //12
+      console.log("n1 = " + n1); //12
+      k = n2--;
+      console.log("k = " + k); //20
+      console.log("n2 = " + n2); //19
+      k = --n2;
+      console.log("k = " + k); //18
+      console.log("n2 = " + n2); //18
+    </script>
+  </head>
+  <body></body>
+</html>
